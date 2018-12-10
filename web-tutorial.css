@@ -35,7 +35,7 @@ h1{
 }
 
 .sidebarTitle{
-    background-color: linear-gradient( lightblue, lightgreen);;
+    background-color: linear-gradient( lightblue, lightgreen);
     width: 10%;
     position: fixed;
     left: 90%;
