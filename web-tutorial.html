@@ -4,29 +4,29 @@
 
     <title>Tutorial Website</title>
     <link rel="stylesheet" type="text/css" href="web-tutorial.css">
-    <link rel="stylesheet" href="./lib/animate.min.css">
+    <link rel="stylesheet" href="./Animations/animations.css">
 </head>
 <body>
 
-    <header class="animated bounce">
+    <header class="animated fadeInRight">
 
-        <h1 class="animated"><u>WELCOME TO JAVASCRIPT
-            </u>
-        </h1>
+        <h1 class="animated"><u>JAVASCRIPT STUFF!</u>
+</h1>
 
     </header>
 
 <div id="siteInfo">
         <p>This site is meant to help those that are just
         starting out or interested in JavaScript by showing 
-        a few different concepts used to create different things. 
+        a few different concepts that are used for pretty much everything. 
         </p>
 </div>
+<br>
     <nav>
     <ul id="navLinks">
         <li>
-            <a href="blank" class="navLink">
-            <em>HOME</em>
+            <a href="#home" class="navLink">
+            <em>Home</em>
         </a> 
     </li>
 
@@ -36,7 +36,7 @@
         </a></li>
 
         <li>
-                <a href="#Objects" class= "navLink">
+                <a href="#objects" class= "navLink">
                 <em>Objects</em>
             </a></li>
            
@@ -45,8 +45,8 @@
                 <em>Arrays</em>
             </a></li>
             <li>
-                    <a href="#conditionals" class= "navLink">
-                    <em>Conditionals</em>
+                <a href="#conditionals" class= "navLink">
+                <em>Conditionals</em>
                 </a></li>
 
     </ul>
@@ -55,18 +55,17 @@
 
     <sidebar id="sideBarWrapper"> 
            
-        <h2>Top Picks</h2>
-
+        <u><h2>Top Picks</h2></u>
             <div id="sideBarlinks">
-                    <h4 class="sidebarTitle">JavaScript Help</h4>
+                    <h4 class="sidebarTitle"> <u>for JavaScript help and info</h4></u>
 <br><br><br>
                 <ul class="sideBarList"></ul>
                     <li>
                         <a class="sideBarLink" target="_blank" href="https://www.w3schools.com/default.asp">W3 Schools</a>
-                    </li> <br>
+                    </li> <br><br>
                     <li>
                         <a class="sideBarLink" target="_blank" href="https://stackoverflow.com/">Stack Overflow</a>
-                    </li> <br>
+                    </li> <br><br>
                     <li><a class="sideBarLink" target="_blank" href="https://developer.mozilla.org/en-US/">MDN Web Docs</a>
                     </li>
                 </ul>
@@ -82,46 +81,102 @@
     <article class="contentBox">
         <a id="functions">
 
-    <h3>Functions</h3>
-    <p>"Functions allow us to execute some action or actions. They are the lifeblood of your program, 
-            <br> and they are used everywhere! Go to any site, and functions are firing. Again, functions allow 
-             <br>us to execute some action, and they are able to be used in a repeated fashion."</p>
+    <h2>Functions</h2>
+    <p>Functions allow us to execute some action or actions and they are able to be used in a repeated fashion. 
+        They are the lifeblood of your program, but they must be called! 
+            <br> and they are used everywhere! Go to any site, and functions are firing. In the example below, we are trying to create a function that when called, will
+        say "Hello, my name is Tom McClellan." <br>So first, we named our function, then entered our perameters that we have defined as Tom and McClellen. Then,
+    when we call our function, it should introduce itself.   </p>
     <div class="codeBlock">
         <pre>
             <code>
-                    var weather=75;
-
-                    if(weather > 70){
-                        console.log("Wear shorts today! It's going to be hot!");
+        function firstLast(first, last){
+        let fullName = first + ' ' + last;
+        console.log(`Hello, my name is ${fullName}.`);
+            }
                     
-                    }
+        firstLast('tom' , 'mcclellan');
+        firstLast('allie' , 'walker');
             </code>
         </pre>
     </div>
 </a>
 </article>
-</section>
+
 
         <section id="keyContent">
-
+            <article class="contentBox">
             <a id="objects">
-    <h3>Objects</h3>
-    <p>"Objects are a data type that let us store a collection of properties and methods."</p>
-   
-    <article class="contentBox">
-            <a id="Arrays">
-    <h3>Arrays</h3>
-    <p>"An array is a numerically indexed map of values. Starting out, it's easier to just say 
-        <br>it's a great way to collect a bunch of values together. They allow us to collect things 
-        <br>like names, usernames, product names, prices, etc."</p>
-        
-        <section id="keyContent">
+    <h2>Objects</h2>
+    <p>Objects are containers that let us store a collection of different datatypes, properties and methods. Below I have included and example of an object.
+        <br>We have burritosNow and different data inside of it including size, quantity and our boolean of true. In the console.log, I asked for <br>burritosNow which will 
+        give me all of the information that is included. When I ask for "typeof" burritosNow, if will give me a list of information <br>as well as let me know that 
+        the "typeof" is an object.
+              
+         </p>
+         <div class="codeBlock">
+            <pre>
+                <code>
+        let burritosNow = {
+        size: 'Large',
+        quantity: 4,
+        now: true
+            };
+        console.log(burritosNow);
+        console.log(typeof burritoesNow); //OBJECT
+                </code>
+            </pre>
+        </div>
 
-                <a id="Conditionals">
-    <h3>Conditionals</h3>
-    <p>"Conditionals are used to check certain conditions in your application. 
+        </a>
+            </article>
+
+    <article class="contentBox">
+            <a id="Arrays"></a>
+    <h2>Arrays</h2>
+    <p>An array is a numerically indexed map of values that are inside square brackets. Starting out, it's easier to just say 
+        <br>it's a great way to collect a bunch of values together. They allow us to collect things 
+        <br>like names, usernames, product names, prices, etc. In the lists below, we know that we are working with arrays because of the [] square brackets.
+    <br></p>
+       
+        <div class="codeBlock">
+            <pre>
+                <code>
+        let long = [1,2,3,4,5,6,7,8,9,10]
+        console.log(long.length);
+                    
+        let colors= ['blue' , 'green' , 'yellow' , 'red' , 'orange'];
+        console.log(colors.length); //6
+        console.log(typeof colors); //object
+        console.log(typeof colors.toString());
+                </code>
+            </pre>
+        </div>   
+    
+    </article>
+        
+        
+    <section id="keyContent">
+        <article class="contentBox">
+                <a id="conditionals">
+    <h2>Conditionals</h2>
+    <p>Conditionals are used to check certain conditions in your application. 
         Conditionals have the power to alter the state of your application <br> 
-        based on certain conditions being met or unmet, true or untrue."</p>
+        based on certain conditions being met or unmet, true or untrue. In the example below, we have our variable "weather" which 
+        is equal to 75. <br>We have our if statement that tells us that if the weather is GREATER THAN 70,
+        to let us know to wear shorts. <br>When we run our function, because 75 is greater than 70, we will be alerted to wear shorts!  </p>
+    <div class="codeBlock">
+        <pre>
+            <code>
+    var weather=75;
+
+    if(weather > 70){
+    console.log("Wear shorts today! It's going to be hot!");
+                    
+        }
+            </code>
+        </pre>
+    </div></p>
 
     </a>
     </section>
@@ -136,8 +191,8 @@
     </div>
 
    
-    <footer style="background-color: grey;">
-            <p>Made by Allie</p>
+    <footer style="float: left;">
+            <p>Made by Allie Walker</p>
             </footer>
            
 </body>

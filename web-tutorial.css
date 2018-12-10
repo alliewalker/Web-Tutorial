@@ -9,72 +9,39 @@ h1{
 
 }
 
-.animated{
-    animation-name: header;
-    animation-duration: 1s;
-
-}
-     
-@keyframes header {
-    from,
-    20%,
-    53%,
-    80%,
-    to {
-      -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0);
-    }
-  
-    40%,
-    43% , to {
-      -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-      -webkit-transform: translate3d(0, -30px, 0);
-      transform: translate3d(0, -30px, 0);
-    }
-
-70% {
-    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-    -webkit-transform: translate3d(0, -15px, 0);
-    transform: translate3d(0, -15px, 0);
-}
-
-  90% {
-    -webkit-transform: translate3d(0, -4px, 0);
-    transform: translate3d(0, -4px, 0);
-  }
-}
-
 #siteInfo {
     max-width: 60%;
     margin: 2vh 0 0 7vh;
-    font-size: 210%;
+    font-size: 150%;
 }
 
 .navLink{
-    font-size: 15px;
+    font-size: 18px;
+    text-decoration: none;
 }
 
 #sideBarWrapper{
     position: fixed;
     height: 100%;
     width: 10%;
-    z-index: 1;
+    z-index: 0;
     top: 0;
     left: 90%;
     text-align: center;
-    color: darkblue; 
-    background-color: #f1f1f1
+    color: white; 
+    background-color: linear-gradient( lightblue, lightgreen);
+    border: 1px;
+    border-style: solid;
 }
 
 .sidebarTitle{
-    background-color: #f1f1f1;
+    background-color: linear-gradient( lightblue, lightgreen);;
     width: 10%;
     position: fixed;
     left: 90%;
+    top: 2em;
+    color: white;
+
 
 }
 
@@ -83,13 +50,9 @@ h1{
     position: relative;
     align-content: center;
     background-color: #f1f1f1;
-    font: black;
+    font: white;
     display:block ;
     left: 90%;
-}
-
-.sidebarList{
-padding: ;
 }
 
 
@@ -103,21 +66,24 @@ ul{
 li {
     display: inline;
     color: teal;
+    text-decoration: none;
     padding: 15px 16px;
     text-decoration: none;
     display: inline;
     position: relative;
-
+    text-decoration: none;
 }
+
 
 .links a{
     display: inline;
     text-align: center;
+    text-decoration: none;
 
 }
 
 hr.titleLine {
-    width: 40%;
+    width: 60%;
     background-color: white;
     height: .5vh;
     margin: 0;
@@ -137,7 +103,6 @@ li a:hover{
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: black;
     overflow-x: hidden;
     padding-top: 60px;
     transition: 0.5;
